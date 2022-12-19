@@ -4,7 +4,6 @@ import '../../../core/utils/constants.dart';
 import '../../../core/widgets/already_have_an_account_acheck.dart';
 import '../../signup_feature/screen/signup_screen.dart';
 
-
 class LoginForm extends StatelessWidget {
   const LoginForm({
     Key? key,
@@ -21,7 +20,7 @@ class LoginForm extends StatelessWidget {
             cursorColor: kPrimaryColor,
             onSaved: (email) {},
             decoration: const InputDecoration(
-              hintText: "Your email",
+              hintText: "نام کاربری",
               prefixIcon: Padding(
                 padding: EdgeInsets.all(defaultPadding),
                 child: Icon(Icons.person),
@@ -35,7 +34,7 @@ class LoginForm extends StatelessWidget {
               obscureText: true,
               cursorColor: kPrimaryColor,
               decoration: const InputDecoration(
-                hintText: "Your password",
+                hintText: "گذرواژه",
                 prefixIcon: Padding(
                   padding: EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.lock),
@@ -49,7 +48,8 @@ class LoginForm extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               child: Text(
-                "Login".toUpperCase(),
+                "ورود",
+                style: TextStyle(fontSize: 18),
               ),
             ),
           ),

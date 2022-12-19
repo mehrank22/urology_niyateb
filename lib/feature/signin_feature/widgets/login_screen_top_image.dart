@@ -13,15 +13,15 @@ class LoginScreenTopImage extends StatelessWidget {
     return Column(
       children: [
         const Text(
-          "LOGIN",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          "ورود",
+          style: TextStyle(fontSize: 28),
         ),
         const SizedBox(height: defaultPadding * 2),
         Row(
           children: [
             const Spacer(),
             Expanded(
-              flex: 8,
+              flex: 14,
               child: Image.asset("assets/images/login.png"),
             ),
             const Spacer(),

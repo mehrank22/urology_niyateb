@@ -15,10 +15,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Auth',
       theme: ThemeData(
           primaryColor: kPrimaryColor,
+          fontFamily: 'titlefont',
           scaffoldBackgroundColor: Colors.white,
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              elevation: 0, backgroundColor: kPrimaryColor,
+              elevation: 0,
+              backgroundColor: kPrimaryColor,
               shape: const StadiumBorder(),
               maximumSize: const Size(double.infinity, 56),
               minimumSize: const Size(double.infinity, 56),
