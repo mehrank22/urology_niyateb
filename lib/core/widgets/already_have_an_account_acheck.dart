@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:urology_niyateb/core/utils/constants.dart';
+
 class AlreadyHaveAnAccountCheck extends StatelessWidget {
   final bool login;
   final Function? press;
@@ -12,16 +13,19 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      textDirection: TextDirection.rtl,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          login ? "Don’t have an Account ? " : "Already have an Account ? ",
-          style: const TextStyle(color: kPrimaryColor),
+          login ? "حساب کاربری ندارید ؟ " : "حساب کاربری دارید؟ ",
+          style: const TextStyle(
+            color: kPrimaryColor,
+          ),
         ),
         GestureDetector(
           onTap: press as void Function()?,
           child: Text(
-            login ? "Sign Up" : "Sign In",
+            login ? " ثبت نام کنید " : "وارد شوید ",
             style: const TextStyle(
               color: kPrimaryColor,
               fontWeight: FontWeight.bold,

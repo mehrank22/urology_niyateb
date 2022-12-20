@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:urology_niyateb/core/utils/constants.dart';
+import 'package:urology_niyateb/feature/signin_feature/presention/bloc/bloc/signin_bloc.dart';
+import 'package:urology_niyateb/locator.dart';
 import 'package:urology_niyateb/welcome_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() async {
+  await setup();
+
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider<SigninBloc>(
+      create: (context) => SigninBloc(locator()),
+    )
+  ], child: const MyApp()));
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

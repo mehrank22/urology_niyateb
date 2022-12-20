@@ -4,8 +4,6 @@ import 'package:urology_niyateb/core/utils/constants.dart';
 import '../feature/signin_feature/presention/screen/login_screen.dart';
 import '../feature/signup_feature/screen/signup_screen.dart';
 
-
-
 class LoginAndSignupBtn extends StatelessWidget {
   const LoginAndSignupBtn({
     Key? key,
@@ -28,30 +26,30 @@ class LoginAndSignupBtn extends StatelessWidget {
                 ),
               );
             },
-            child: Text(
-              "Login".toUpperCase(),
+            child: const Text(
+              "ورود",
+              style: TextStyle(fontSize: 18),
             ),
           ),
         ),
         const SizedBox(height: 16),
         ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return const SignUpScreen();
-                },
-              ),
-            );
-          },
-          style: ElevatedButton.styleFrom(
-              backgroundColor: kPrimaryLightColor, elevation: 0),
-          child: Text(
-            "Sign Up".toUpperCase(),
-            style: const TextStyle(color: Colors.black),
-          ),
-        ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const SignUpScreen();
+                  },
+                ),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+                backgroundColor: kPrimaryLightColor, elevation: 0),
+            child: const Text(
+              "ثبت نام",
+              style: TextStyle(fontSize: 18, color: Colors.black),
+            )),
       ],
     );
   }
